@@ -18,10 +18,12 @@ function palindromeChecker(str) {
     let joinRPW = reverseSplWrd.join('');
 
     if (word === joinRPW) {
-        console.log(`Yes! ${word} is a palindrome!`)
+        console.log(`Yes! ${word} is a palindrome!`);
+        newH2.innerText = `Yes! ${word} is a palindrome!`;
     }
     else {
-        console.log(`Womp, wooomp! ${word} is not a palindrome!`)
+        console.log(`Womp, wooomp! ${word} is not a palindrome!`);
+        newH2.innerText = `Womp, wooomp! ${word} is not a palindrome!`
     }
 }
 
@@ -61,6 +63,9 @@ function createForm() {
         palindromeChecker(liveWrd);
         console.log(liveWrd);
     })
+    newMain.appendChild(newH2);
+    newH2.style.color = 'white';
+    newH2.innerText = ''
 }
 
 createHeader();
