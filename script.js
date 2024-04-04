@@ -1,17 +1,15 @@
-let word = "";
+const newMain = document.createElement('main');
+const newSection = document.createElement('section');
+const newH1 = document.createElement('h1');
+const newH2 = document.createElement('h2');
+const newp = document.createElement('p');
 
-let splitWord = word.split('');
 
-let reverseSplWrd = splitWord.reverse();
 
-let joinRPW = reverseSplWrd.join('');
-
-// console.log('this is the OG word: ' + word);
-// console.log('this is the split word: ' + splitWord);
-// console.log('this is the reversed split word: ' + reverseSplWrd);
-// console.log('this is the joined word: ' + joinRPW);
 
 function palindromeChecker(str) {
+    let word = "";
+
     word = str;
 
     let splitWord = word.split('');
@@ -20,7 +18,7 @@ function palindromeChecker(str) {
 
     let joinRPW = reverseSplWrd.join('');
 
-    if(word === joinRPW) {
+    if (word === joinRPW) {
         console.log(`Yes! ${word} is a palindrome!`)
     }
     else {
