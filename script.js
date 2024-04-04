@@ -45,7 +45,7 @@ function createHeader() {
     newH1.style.color = 'white';
     newH1.style.padding = '0';
 }
-
+let liveWrd = '';
 function createForm() {
     body.appendChild(newMain);
     newMain.style.width = '55vw';
@@ -55,6 +55,12 @@ function createForm() {
     newMain.appendChild(btnInput);
     txtInput.type = 'text';
     btnInput.type = 'submit';
+    btnInput.addEventListener('click', e => {
+        liveWrd = txtInput.value;
+        e.preventDefault();
+        palindromeChecker(liveWrd);
+        console.log(liveWrd);
+    })
 }
 
 createHeader();
