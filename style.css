@@ -1,0 +1,25 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  h1, h2, p, ul, ol {
+    color: #FFFFFF;
+  }
+
+  #logo-img {
+    width: 20vw;
+  }
+
+body {
+   
+    background-color: #000000;
+    margin: 0;
+}
+
+#banner-wrapper, #palindrome-section, #faq-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
