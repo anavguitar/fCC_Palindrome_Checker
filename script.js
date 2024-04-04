@@ -7,7 +7,8 @@ const newH1 = document.createElement('h1');
 const newH2 = document.createElement('h2');
 const newPara = document.createElement('p');
 const newImg = document.createElement('img');
-const newInput = document.createElement('input');
+const txtInput = document.createElement('input');
+const btnInput = document.createElement('input');
 
 //this function checks the string if its a palindrome
 function palindromeChecker(str) {
@@ -26,7 +27,9 @@ function palindromeChecker(str) {
 
 function createHeader() {
     body.style.display = 'flex';
+    body.style.flexDirection = 'column';
     body.style.justifyContent = 'center';
+    body.style.alignItems = 'center';
     body.style.backgroundColor = '#6F8FAF'
 
     body.appendChild(newHeader);
@@ -43,4 +46,17 @@ function createHeader() {
     newH1.style.padding = '0';
 }
 
+function createForm() {
+    body.appendChild(newMain);
+    newMain.style.width = '55vw';
+    newMain.style.height = '10vw';
+    newMain.style.backgroundColor = '#5D3FD3';
+    newMain.appendChild(txtInput);
+    newMain.appendChild(btnInput);
+    txtInput.type = 'text';
+    btnInput.type = 'submit';
+}
+
 createHeader();
+
+createForm();
