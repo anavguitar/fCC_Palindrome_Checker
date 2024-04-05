@@ -3,7 +3,7 @@ const checkBtn = document.getElementById('check-btn');
 
 
 function cleanInputString(str) {
-    const regex = /[^a-z^A-Z]+/g;
+    const regex = /[^a-z^A-Z^0-9]+/g;//added^0-9
     return str.replace(regex, '');
   }
 
@@ -23,7 +23,7 @@ function palindromeChecker(str) {
         }
         else {
             console.log(`${word} is not a palindrome!`);
-            result.innerText = `${word} is not a palindrome!`
+            result.innerText = `${word} is not a palindrome`
         }
     } else {
         console.log(`Please input a value`);
