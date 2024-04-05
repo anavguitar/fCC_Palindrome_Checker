@@ -1,6 +1,7 @@
 const textInput = document.getElementById('text-input');
 const checkBtn = document.getElementById('check-btn');
-
+const resultDiv = document.getElementById('result')
+let liveWrd = '';
 
 function cleanInputString(str) {
     const regex = /[^a-z^A-Z^0-9]+/g;//added^0-9
@@ -19,18 +20,18 @@ function palindromeChecker(str) {
     if(word.length > 0) {
         if (lowerCaseWord === joinRPW) {
             console.log(`${word} is a palindrome`);
-            result.innerText = `${word} is a palindrome`;
+            resultDiv.innerText = `${word} is a palindrome`;
         }
         else {
             console.log(`${word} is not a palindrome!`);
-            result.innerText = `${word} is not a palindrome`
+            resultDiv.innerText = `${word} is not a palindrome`
         }
     } else {
         console.log(`Please input a value`);
-        result.innerText = `Please input a value`;
+        resultDiv.innerText = `Please input a value`;
     }
 }
-// let liveWrd = '';
+
 checkBtn.addEventListener('click', e => {
     liveWrd = textInput.value;
     e.preventDefault();
