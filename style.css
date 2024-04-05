@@ -6,15 +6,18 @@
 /* added a text-shadow animation transition. not completely sure how it works */
   h1, h2, p, ul, ol, div {
     color: #ffffff;
-    text-shadow: 6px 6px 12px rgb(129, 207, 13),
-      0px 0px 0px transparent,
-     -6px -6px 12px rgb(175, 64, 23);
-     animation: color-shift 3s ease-in-out infinite alternate;
+    list-style-type:disc;
+    /* animation: color-shift 3s ease-in-out infinite alternate; */
+  }
+
+  #color-shadow-animation {
+    animation: color-shift 3s ease-in-out infinite alternate;
   }
 
   @keyframes color-shift {
-    0% { text-shadow: 6px 6px 12px rgb(129, 207, 13), -6px -6px 12px rgb(175, 64, 23) } /* Start green */
-    100%{ text-shadow: 0px 0px 0px transparent}
+    100% { text-shadow: 6px 6px 12px rgb(108, 248, 101), 
+      -6px -6px 12px rgb(255, 0, 0), 
+      -8px -8px 16px rgb(248, 248, 109) } 
   } 
 
   #logo-img {
@@ -22,13 +25,44 @@
   }
 
 body {
-   
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
     background-color: #000000;
-    margin: 0;
+    height: 40rem;
 }
 
-#banner-wrapper, #palindrome-section, #faq-section {
+main, #banner-wrapper, #palindrome-section, #faq-section {
     display: flex;
-    flex-direction: column;
+    flex-flow: column wrap;
     align-items: center;
+}
+#logo-span-one, #logo-span-two {
+  animation: white-shift 3s ease-in-out infinite alternate;
+}
+
+@keyframes white-shift {
+  100% { text-shadow: 6px -6px 12px white } 
+} 
+
+#logo-span-one {
+  color:rgb(255, 0, 0);
+}
+#logo-span-two {
+  color:rgb(108, 248, 101);
+}
+
+#palindrome-section {
+  width: 60%;
+  padding: 20px;
+  border: solid white 3px;
+  margin-bottom: 10px;
+}
+
+#faq-section {
+  width: 60%;
+  padding: 20px;
+  border: solid white 3px;
+ 
 }
