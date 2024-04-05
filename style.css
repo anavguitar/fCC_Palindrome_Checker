@@ -3,10 +3,19 @@
     padding: 0;
     box-sizing: border-box;
   }
-
+/* added a text-shadow animation transition. not completely sure how it works */
   h1, h2, p, ul, ol, div {
-    color: #FFFFFF;
+    color: #ffffff;
+    text-shadow: 6px 6px 12px rgb(129, 207, 13),
+      0px 0px 0px transparent,
+     -6px -6px 12px rgb(175, 64, 23);
+     animation: color-shift 3s ease-in-out infinite alternate;
   }
+
+  @keyframes color-shift {
+    0% { text-shadow: 6px 6px 12px rgb(129, 207, 13), -6px -6px 12px rgb(175, 64, 23) } /* Start green */
+    100%{ text-shadow: 0px 0px 0px transparent}
+  } 
 
   #logo-img {
     width: 20vw;
