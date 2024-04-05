@@ -6,8 +6,6 @@
 /* added a text-shadow animation transition. not completely sure how it works */
   h1, h2, p, ul, ol, div {
     color: #ffffff;
-    list-style-type:disc;
-    /* animation: color-shift 3s ease-in-out infinite alternate; */
   }
 
   #color-shadow-animation {
@@ -37,6 +35,10 @@ main, #banner-wrapper, #palindrome-section, #faq-section {
     display: flex;
     flex-flow: column wrap;
     align-items: center;
+}
+
+#banner-wrapper {
+  text-align: center;
 }
 #logo-span-one, #logo-span-two {
   animation: white-shift 3s ease-in-out infinite alternate;
