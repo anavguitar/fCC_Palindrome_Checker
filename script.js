@@ -28,7 +28,7 @@ function palindromeChecker(str) {
         }
     } else {
         console.log(`Please input a value`);
-        resultDiv.innerText = `Please input a value`;
+        alert(`Please input a value`);
     }
 }
 
